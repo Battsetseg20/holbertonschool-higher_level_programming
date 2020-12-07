@@ -60,7 +60,7 @@ Complete this source code to print Welcome to Holberton School!
 #### 7-edges.py
 
 Complete this source code to print
-````bash
+```bash
 First 3 letters: Hol
 Last 2 letters: on
 Middle word: olberto
