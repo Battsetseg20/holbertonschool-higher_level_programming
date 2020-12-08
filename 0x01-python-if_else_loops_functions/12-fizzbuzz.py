@@ -10,6 +10,6 @@ for number in range (1, 101):
     elif number % 5 == 0:
         print("Buzz", end=" ")
     elif number % 3 == 0:
-        print("Fizz", end= " ")
+        print("Fizz", end=" ")
     else:
         print("{}".format(number), end=" ")
