@@ -11,3 +11,4 @@ def roman_to_int(roman_string):
             else:
                 num += dict[roman_string[i]]
         return (num)
+    return (0)
