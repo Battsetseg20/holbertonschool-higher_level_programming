@@ -4,7 +4,7 @@ import math
 """Write a class MagicCLass"""
 
 
-
+"""represent a circle"""
 class MagicClass:
     def __init__(self, radius=0):
         self.__radius = 0
@@ -12,12 +12,10 @@ class MagicClass:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-
+    """define instance"""
     def area(self):
         return (self.__radius ** 2 * math.pi)
 
-
+    """define instance"""
     def circumference(self):
         return (2 * math.pi * self.__radius)
-
-#import dis; dis.dis(MagicClass)
