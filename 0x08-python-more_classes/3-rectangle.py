@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Module containing class Rectangle"""
+"""Module contains a class representing Rectangle"""
 
 
-class Rectangle:
+class Rectangle():
+    """Represents a rectangle"""
+
     def __init__(self, width=0, height=0):
         """Defines a rectangle by width and height"""
         self.width = width
@@ -10,30 +12,26 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get the attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >=0")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         else:
             self.__width = value
 
     @property
     def height(self):
-        """Get the height attribute"""
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
-        """Set the height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
@@ -44,7 +42,10 @@ class Rectangle:
 
     def perimeter(self):
         """Returns the rectangle perimeter"""
-        return 2 * (self.__height + self.__width)
+        if self.__height is 0 or self.__width is 0:
+            return 0
+        else:
+            return 2 * (self.__height + self.__width)
 
     def __str__(self):
         """Returns the printable representation of the rectangle"""
