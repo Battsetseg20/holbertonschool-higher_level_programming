@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module containing class Rectangle"""
+"""Module contains a class representing Rectangle"""
 
 
 class Rectangle:
@@ -10,26 +10,22 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get the attribute width"""
         return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Set the width"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >=0")
-        self.__width = value
 
     @property
     def height(self):
-        """Get the height attribute"""
         return self.__height
+
+    @width.setter
+    def width(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
     @height.setter
     def height(self, value):
-        """Set the height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
