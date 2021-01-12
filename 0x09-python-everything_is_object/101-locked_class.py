@@ -9,6 +9,3 @@ class LockedClass:
     # To define slots, you have to define a list with the name __slots__.
     # The list has to contain all the attributes, you want to use.
     __slots__ = ['first_time']
-
-    def __init__(self, first_name=""):
-        self.first_name = first_name
