@@ -15,9 +15,9 @@ Test the cases:
     My name is Walter White
 
     >>> say_my_name("Bob")
-    My name is Bob
+    My name is Bob 
 
-    >>> sat_my_name("White", 12)
+    >>> say_my_name("White", 12)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
