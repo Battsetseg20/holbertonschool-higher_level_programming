@@ -20,6 +20,13 @@ Import module:
        >>> print(matrix_divided(matrix, 3))
        [[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
 
+       >>> matrix = [
+       ...     [1, 2, 3],
+       ...     [4, 5, 6]
+       ... ]
+       >>> print(matrix_divided(matrix, float('inf')))
+       [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
        >>> matrix = None
        >>> print(matrix_divided(matrix, 3))
        Traceback (most recent call last):
@@ -67,14 +74,10 @@ Import module:
        Traceback (most recent call last):
        TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
-       >>> print(matrix_divded(matrix, 
-
        >>> matrix = [
-       ...	 [1, 2],
-       ...	 [3, 4, 5]
+       ...     [1, 2, 3, 4],
+       ...     [5, 6, 7]
        ... ]
-       print(matric_divided(matrix, 3))
+       >>> print(matrix_divided(matrix, 3))
        Traceback (most recent call last):
-       TypeError: matrix must have each row with the same size
-
-
+       TypeError: Each row of the matrix must have the same size
