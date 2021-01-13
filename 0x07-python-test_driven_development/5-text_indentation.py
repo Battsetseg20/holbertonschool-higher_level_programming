@@ -5,23 +5,17 @@
 def text_indentation(text):
     """Function that prints a text with 2 new lines
     after ., ?, :"""
-    if type(text) != str:
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    c = 0
-    newstring = ""
-    for i in text:
-        if c == 1:
-            newstring = ""
-            c = 0
-        if i not in "?:.":
-            newstring += i
+    after_new_line = False
+    for c in text:
+        if after_new_line:
+            if c == " ":
+                continue
+            after_new_line = False
+        if c == '.' or c == '?' or c == ':':
+            print(c)
+            print(end="")
+            after_new_line = True
         else:
-            newstring += i
-            print(newstring.strip())
-            print()
-            c = 1
-    if c == 0 and '\n' not in newstring:
-        print(newstring.strip(), end="")
-    elif c == 0:
-        print(newstring.strip())
+            print(c, end="")
