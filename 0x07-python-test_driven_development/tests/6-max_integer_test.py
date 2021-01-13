@@ -9,17 +9,22 @@ class TestMaxInteger(unittest.TestCase):
     """tests for 6-max_integer.py"""
 
     def test_list_integer(self):
-        """Does list like [1, 2, 3, 4] work?"""
+        """Test for max at the end"""
         max_int = max_integer([1, 2, 3, 4])
         self.assertEqual(max_int, 4)
 
     def test_list_unordered_ints(self):
-        """Does list like [1, 2, 4, 3] work?"""
+        """Test for max in the middle"""
         max_int = max_integer([1, 2, 4, 3])
         self.assertEqual(max_int, 4)
 
+    def test_list_descend_order(self):
+        """Test for max at the beginning"""
+        max_int = max_integer([4, 2, 3, 1])
+        self.assertEqual(max_int, 4)
+
     def test_max_at_begginning(self):
-        """Does list with negative numbers work?"""
+        """Test with negative numbers"""
         max_int = [-4, -3, -2, -1]
         self.assertEqual(max_integer(max_int), -1)
 
@@ -34,8 +39,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string(self):
         """Test a string."""
-        string = "List"
-        self.assertEqual(max_integer(string), 't')
+        max_str = "List"
+        self.assertEqual(max_integer(max_str), 't')
 
     def test_floats(self):
         """Test a list of floats."""
@@ -44,8 +49,13 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_int_in_list(self):
         """Test one int in a list"""
-        ints_and_floats = [1.5, 2.5, 5, 3.5]
-        self.assertEqual(max_integer(ints_and_floats), 5)
+        max_int_floats = [1.5, 2.5, 5, 3.5]
+        self.assertEqual(max_integer(max_int_floats), 5)
+
+    def test_list_one_element(self):
+        """Test for list of one element"""
+        max_int = [1]
+        self.assertEqual(max_integer(max_int), 1)
 
 
 
