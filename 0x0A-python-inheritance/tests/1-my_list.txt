@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""Unittest for 1-my_list.py
+"""
+
+import unittest
+
+>>> MyList = __import__('1-my_list').MyList
+
