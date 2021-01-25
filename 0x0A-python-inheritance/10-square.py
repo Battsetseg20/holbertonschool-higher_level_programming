@@ -7,7 +7,7 @@ class Square(Rectangle):
     """Defining its methods"""
 
     def __init__(self, size):
-        """Initialing its attributes"""
+        """Initializinging its attributes"""
         super().integer_validator("size", size)
         super().__init__(size, size)  # def area() AttribError:Rectangle__width
         self.__size = size
