@@ -41,3 +41,9 @@ ______________________________________________________________________
 >>> my_list = MyList(['car','bike','train'])
 >>> my_list.print_sorted()
 ['bike', 'car', 'train']
+
+>>> print(issubclass(MyList, list))
+True
+
+>>> print(str(my_list))
+['car', 'bike', 'train']
