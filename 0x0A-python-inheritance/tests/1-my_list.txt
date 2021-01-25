@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""Unittest for 1-my_list.py
+"""Doctest for 1-my_list.py
 """
 
-import unittest
 
 >>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+
 
