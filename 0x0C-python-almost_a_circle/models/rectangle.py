@@ -88,8 +88,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
-        n = 0
-        for arg in args:
+        for n, arg in enumerate(args):
             if n == 0:
                 self.id = arg
             elif n == 1:
@@ -100,4 +99,3 @@ class Rectangle(Base):
                 self.x = arg
             elif n == 4:
                 self.y = arg
-            n += 1
