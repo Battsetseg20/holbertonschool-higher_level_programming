@@ -21,7 +21,6 @@ class Square(Rectangle):
         self.width = value
 
     def __str__(self):
-        """Overloads the Rectangle class behavior by defined method"""
+        """Overloads the Rectangle str behavior by defined method"""
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
-
