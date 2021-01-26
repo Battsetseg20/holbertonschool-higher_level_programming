@@ -88,6 +88,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
+        """Assigns argument to each attribute"""
         for n, arg in enumerate(args):
             if n == 0:
                 self.id = arg
