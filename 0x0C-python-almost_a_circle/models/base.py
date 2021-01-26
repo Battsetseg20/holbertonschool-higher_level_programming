@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains a class Base"""
 import json
+import os
 
 
 class Base():
@@ -51,12 +52,19 @@ class Base():
         dummy.update(**dictionary)
         return dummy
 
+    #task19
+
     @classmethod
-    def load_from_file(cls):
-        """Returns list of instances"""
-        filename = cls.__name__ + ".json"
-        if filename is None:
+    def save_to_file_csv(cls, list_objs):
+        """Json serialization"""
+        filename = cls.__name__ + ".csv"
+        if list_objs is None:
             return []
-        with open(filename, 'r') as file_object:
-            list_dict = Base.from_json_string(file_object.read())
-            return list(cls.create(**dict) for dict in list_dict)
+        new_list = [obj.to_dictionary() for obj in list_objs]
+        with open(filename, 'w') as csv_file:
+            csv_file.write(cls.to_json_string(new_list))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instance"""
+        pass
