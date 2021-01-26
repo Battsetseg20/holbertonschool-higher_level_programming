@@ -115,3 +115,13 @@ class Rectangle(Base):
                     self.x = value
                 elif name is "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Returns dictionary representation of a Rectangle"""
+        return {
+            "id": self.id,
+            "x": self.x,
+            "y": self.y,
+            "width": self.width,
+            "height": self.height
+            }
