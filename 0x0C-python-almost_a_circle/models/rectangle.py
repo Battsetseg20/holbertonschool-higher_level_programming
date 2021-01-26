@@ -89,7 +89,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Assigns argument to each attribute"""
-        for n, arg in enumerate(args):
+        for arg in args:
             if n == 0:
                 self.id = arg
             elif n == 1:
