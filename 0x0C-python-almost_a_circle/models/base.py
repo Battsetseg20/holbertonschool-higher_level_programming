@@ -52,7 +52,16 @@ class Base():
         dummy.update(**dictionary)
         return dummy
 
-    #task19
+    # task19 not complete
+    @classmethod
+    def load_from_file(cls):
+        """Returns list of instances"""
+        filename = cls.__name__ + ".json"
+        if filename is None:
+            return []
+        with open(filename, 'r') as file_object:
+            list_dict = Base.from_json_string(file_object.read())
+            return list(cls.create(**dict) for dict in list_dict)
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
