@@ -2,15 +2,16 @@
   <img width="409" height="128" src="https://www.holbertonschool.com/holberton-logo.png">
 <p>
 
-<p align="center"> <img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210302%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210302T153142Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=78a3118c9e3004d8ca01920fdf13ff3c63a34d48d43858481ebc45cf8915126b">
 
 ### Memo
-#### Useful commands for Task.8
+#### Useful commands for Task 8
 To Insert values into table
-```echo 'INSERT INTO cities (id, state_id, name) VALUES (2, 1, "San Jose");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+```
+echo 'INSERT INTO cities (id, state_id, name) VALUES (2, 1, "San Jose");' | mysql -hlocalhost -uroot -p hbtn_0d_usa
+
 ```
 
-#### Usefule commands for from Task 10 to 16
+#### Usefull commands for from Task 10 to 16
 
 - To start mysql
 ```
@@ -74,7 +75,7 @@ mysql> SHOW TABLES FROM hbtn_0d_tvshows;
 ```
 OR
 ```
-$ SHOW TABLES| mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+$ SHOW TABLES | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 ```
 
 - To see the content a particular table (table `tv_genres`from `hbtn_0d_tvshows`)
@@ -102,11 +103,11 @@ mysql> SELECT * FROM tv_genres;
 ```
 ÒR
 ```
-echo "SELECT * FROM tv_genres" | mysql -uroot -p hbtn_0d_tvshows
+$ echo "SELECT * FROM tv_genres" | mysql -uroot -p hbtn_0d_tvshows
 ```
 ```
-echo 'SELECT * FROM tv_shows;' | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
+$ echo 'SELECT * FROM tv_shows;' | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+$ Enter password: 
 id    title
 1     House
 2     Game of Thrones
@@ -120,8 +121,8 @@ id    title
 10    The Last Man on Earth
 ```
 ```
-echo 'SELECT * FROM tv_show_genres;' | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
+$ echo 'SELECT * FROM tv_show_genres;' | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+$ Enter password: 
 show_id		genre_id
 1			1
 1			2
