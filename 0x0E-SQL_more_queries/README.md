@@ -11,7 +11,7 @@ echo 'INSERT INTO cities (id, state_id, name) VALUES (2, 1, "San Jose");' | mysq
 
 ```
 
-#### Usefull commands for from Task 10 to 16
+#### Useful commands for from Task 10 to 16
 
 - To start mysql
 ```
