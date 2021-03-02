@@ -72,7 +72,7 @@ OR
 $ SHOW TABLES | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
 ```
 
-- To see the content a particular table (table `tv_genres`from `hbtn_0d_tvshows`)
+- To see the content of a particular table (table `tv_genres`from `hbtn_0d_tvshows`)
 ```
 mysql> USE hbtn_0d_tvshows ;
        Reading table information for completion of table and column names
