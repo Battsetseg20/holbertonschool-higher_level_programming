@@ -189,6 +189,7 @@ mysql> SELECT * FROM tv_genres;
 +----+-----------+
 8 rows in set (0.00 sec)
 ```
+```
 mysql> SELECT * FROM tv_show_genres;
 +---------+----------+
 | show_id | genre_id |
@@ -218,6 +219,7 @@ mysql> SELECT * FROM tv_show_genres;
 ```
 
 mysql> SELECT * FROM tv_show_ratings;
+
 +---------+------+
 | show_id | rate |
 +---------+------+
@@ -416,8 +418,10 @@ mysql> SELECT * FROM tv_show_ratings;
 +---------+------+
 192 rows in set (0.00 sec)
 ```
+
 ```
 mysql>  SELECT * FROM  tv_shows;
+
 +----+-----------------------+
 | id | title                 |
 +----+-----------------------+
@@ -436,4 +440,3 @@ mysql>  SELECT * FROM  tv_shows;
 
 mysql> 
 ```
-$ mysql> use database_name;
