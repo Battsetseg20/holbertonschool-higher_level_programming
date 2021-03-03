@@ -214,6 +214,8 @@ mysql> SELECT * FROM tv_show_genres;
 |      11 |        1 |
 +---------+----------+
 19 rows in set (0.00 sec)
+```
+```
 
 mysql> SELECT * FROM tv_show_ratings;
 +---------+------+
@@ -413,7 +415,8 @@ mysql> SELECT * FROM tv_show_ratings;
 |      11 |    4 |
 +---------+------+
 192 rows in set (0.00 sec)
-
+```
+```
 mysql>  SELECT * FROM  tv_shows;
 +----+-----------------------+
 | id | title                 |
