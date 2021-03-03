@@ -1,0 +1,8 @@
+--  Lists all shows from hbtn_0d_tvshows_rate by their rating.
+-- Each record should display: tv_shows.title - rating sum
+-- Results must be sorted in descending order by the rating
+SELECT sh.title sum(r.rate) AS rating
+FROM tv_shows sh
+LEFT JOIN tv_show_ratings r ON sh.id = r.show_id
+GROUP BY sh.title
+ORDER BY rating DESC;
