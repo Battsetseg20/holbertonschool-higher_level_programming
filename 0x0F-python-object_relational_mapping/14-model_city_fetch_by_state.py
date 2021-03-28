@@ -14,14 +14,16 @@ from model_state import Base, State
 from model_city import City
 
 if __name__ == "__main__":
-#an Engine, which the Session will use for connection
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
-#create a configured "Session" class
+    # an Engine, which the Session will use for connection
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        argv[1], argv[2], argv[3]), pool_pre_ping=True)
+# create a configured "Session" class
 Session = sessionmaker(bind=engine)
-#create a Session
+# create a Session
 session = Session()
-#work with session
-for city, state in session.query(City, State).filter(City.state_id == State.id).order_by(City.id):
+# work with session
+for city, state in session.query(City, State).filter(
+        City.state_id == State.id).order_by(City.id):
     print("{}: ({}) {}".format(state.name, city.id, city.name))
-#close the session
+# close the session
 session.close()
