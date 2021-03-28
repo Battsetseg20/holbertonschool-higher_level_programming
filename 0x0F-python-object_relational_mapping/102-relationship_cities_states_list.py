@@ -24,14 +24,14 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
 
-# create a configured "Session" class: bind is used to access database
-Session = sessionmaker(bind=engine)
+    # create a configured "Session" class: bind is used to access database
+    Session = sessionmaker(bind=engine)
 
-# creata a Session
-session = Session()
+    # creata a Session
+    session = Session()
 
-# work with the session
-for city in session.query(City).order_by(City.id):
-    print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    # work with the session
+    for city in session.query(City).order_by(City.id):
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
-session.close()
+    session.close()

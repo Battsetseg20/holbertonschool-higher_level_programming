@@ -17,13 +17,13 @@ if __name__ == "__main__":
     # an Engine, which the Session will use for connection
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
-Base.metadata.create_all(engine)
-# create a configured "Session" class
-Session = sessionmaker(bind=engine)
-# create a Session
-session = Session()
-# work with session
-session.add(City(name="San Francisco", state=State(name="California")))
-session.commit()
-# close the session
-session.close()
+    Base.metadata.create_all(engine)
+    # create a configured "Session" class
+    Session = sessionmaker(bind=engine)
+    # create a Session
+    session = Session()
+    # work with session
+    session.add(City(name="San Francisco", state=State(name="California")))
+    session.commit()
+    # close the session
+    session.close()

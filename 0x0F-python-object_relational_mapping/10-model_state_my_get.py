@@ -14,14 +14,14 @@ if __name__ == "__main__":
     # an Engine, which the Session will use for connection
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
-# create a configured "Session" class
-Session = sessionmaker(bind=engine)
-# create a Session
-session = Session()
-# work with session
-state_name = session.query(State).filter(State.name == argv[4]).first()
-if state_name:
-    print(state_name.id)
-else:
-    print("Not found")
-session.close()
+    # create a configured "Session" class
+    Session = sessionmaker(bind=engine)
+    # create a Session
+    session = Session()
+    # work with session
+    state_name = session.query(State).filter(State.name == argv[4]).first()
+    if state_name:
+        print(state_name.id)
+    else:
+        print("Not found")
+    session.close()
