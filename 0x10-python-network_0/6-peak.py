@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# find the peak(mode) in a list of unsorted integers
+""" find the peak(mode) in a list of unsorted integers"""
 
 
 def find_peak(list_of_integers):
