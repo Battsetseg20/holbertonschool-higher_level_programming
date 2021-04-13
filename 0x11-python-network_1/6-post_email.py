@@ -9,5 +9,8 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    req = requests.post(argv[1], {'email': argv[2]})
+    url = sys.argv[1]
+    value = {'email': sys.argv[2]}
+
+    req = requests.post(url, data=value)
     print(req.text)
