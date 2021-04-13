@@ -6,11 +6,8 @@ Using requests package
 """
 
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    value = {'email': sys.argv[2]}
-
-    req = requests.post(url, value)
+    req = requests.post(argv[1], {'email': argv[2]})
     print(req.text)
