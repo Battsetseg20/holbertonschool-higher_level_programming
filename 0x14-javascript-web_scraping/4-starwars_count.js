@@ -8,9 +8,9 @@ request(url, function (err, response, body) {
     const films = JSON.parse(body).results;
     let count = 0;
     for (const i in films) {
-      const film_ch = films[i].characters;
-      for (const n in film_ch) {
-        if (film_ch[n].includes('18')) {
+      const filmC = films[i].characters;
+      for (const n in filmC) {
+        if (filmC[n].includes('18')) {
           count++;
         }
       }
